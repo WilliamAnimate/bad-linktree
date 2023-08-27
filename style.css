@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Lexend:wght@100;400&display=swap'); */
+* {
+	font-family: lexend !important;
+	font-weight: 400;
+	text-align: center;
+
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #1b1b1b;
+	color: #dddddd;
+}
+
+#idkwhattonamethis {
+	display: flex;
+	flex-direction: column !important;
+	gap: 10px;
+}
+
+/* button */
+
+/* custom style */
+
+.button--anim-left-to-right::before {
+	transform: skew(0deg, 0) translate(-90%);
+}
+a:hover .button--anim-left-to-right::before {
+	transform: skew(0deg, 0) translate(-10%);
+}
+
+.button--anim-right-to-left::before {
+	/* TODO: more accurate value? */
+	transform: skew(0deg, 0) translate(73%);
+}
+a:hover .button--anim-right-to-left::before {
+	transform: skew(0deg, 0) translate(0%);
+}
+
+/* FIXME */
+/* .button--anim-bottom-to-top::before {
+    transform: skew(0deg, 89deg) translate(100%);
+}
+a:hover .button--anim-bottom-to-top::before {
+    transform: skew(0deg, 89deg) translate(0%);
+} */
+
+.button--anim-left-to-right-full::before {
+	transform: skew(0deg, 0) translate(-100%);
+}
+a:hover .button--anim-left-to-right-full::before {
+	transform: skew(0deg, 0) translate(0%);
+}
+
+.button--anim-right-to-left-full::before {
+	transform: skew(0deg, 0) translate(100%);
+}
+a:hover .button--anim-right-to-left-full::before {
+	transform: skew(0deg, 0) translate(0%);
+}
+
+
+.button--anim-skew-left::before {
+    transform: skew(-70deg, 0) translate(-110%);
+}
+
+a:hover .button--anim-skew-left::before {
+    transform: skew(-70deg, 0) translate(-10%);
+}
+
+.button--anim-skew-right::before {
+    transform: skew(70deg, 0) translate(-110%);
+}
+
+a:hover .button--anim-skew-right::before {
+    transform: skew(70deg, 0) translate(-10%);
+}
+
+.button--anim-skew-translate-in::before {
+    transform: skew(70deg, 0) translate(100%);
+}
+
+a:hover .button--anim-skew-translate-in::before {
+    transform: skew(70deg, 0) translate(-5%);
+}
+
+.button--anim-skew-translate-out::before {
+    transform: skew(-70deg, 0) translate(100%);
+}
+
+a:hover .button--anim-skew-translate-out::before {
+    transform: skew(-70deg, 0) translate(-5%);
+}
+
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+
+/* the actual styles */
+
+button {
+	font-weight: 900;
+	letter-spacing: 1px;
+	background-color: transparent;
+	color: #00ccff;
+	border: 1px solid #00ccff;
+	cursor: pointer;
+	padding: 15px 15px;
+	width: 100%;
+	transition: background-color 200ms, color 200ms;
+	margin-left: auto;
+	margin-right: auto;
+	/* display: block; */
+	z-index: 20;
+	position: relative;
+	overflow: hidden;
+}
+
+button::before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 120%;
+	height: 100%;
+	/* background-color: #ff862c; */
+	background-color: #00ccff;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	transition: transform 300ms;
+}
+button h1 {
+	position: relative;
+	display: block;
+	z-index: 100;
+}
+button img {
+	position: relative;
+	display: inline-block;
+	z-index: 100;
+}
+/* a:hover button::before {} */
+a:hover button {
+	color: #fff;
+	background-color: #00ccff;
+	background-color: inherit;
+}
+
+@media (min-width: 668px) {
+	button {
+		max-width: 340px;
+	}
+}
+
+@media (min-width: 820px) {
+	button {
+		display: inline;
+	}
+}
