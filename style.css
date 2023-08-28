@@ -148,6 +148,8 @@ button {
 	transition: background-color 200ms, color 200ms;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 10px;
+
 	/* display: block; */
 	z-index: 20;
 	position: relative;
