@@ -1,18 +1,40 @@
 <!-- markdownlint-disable MD033 MD041 -->
 
 > **Warning**:
-> bad-linktree is still in development! I wouldn't recommend using this for your professional linktree thing yet, but go ahead.
+> bad-linktree is still in development! I wouldn't recommend using this for your professional linktree thing yet, feel free to do so anyway.
 
 # bad-linktree
 
-my own custom linktree creation
+my own custom linktree alternative.
 
 ## **Table of Contents**
 
 * [**Table of Contents**](#table-of-contents)
+* [**Features**](#features)
 * [**Getting started (editing the page)**](#getting-started-editing-the-page)
 * [**Getting started (deploying the page)**](#getting-started-deploying-the-page)
 * [**Legal/License**](#legallicense)
+
+## Features
+
+Why use this over *literally any other solution*/*your own alternative*?
+
+### Pros
+
+* **No watermark** at the bottom of the page
+
+* **No forced ads** if you don't want to
+
+* **You have full control** over the page by styling your own css, adding your own JS, and even editing the HTML. This is simply a starting point.
+
+* **Nearly zero limitations**: Lets say some specific website TOS doesn't allow `x`, but your whole point revolves around `x` and you want to make it themed like such (and `y` isn't an option)<br>
+...Or simply you can't find one with such a permissive license...
+
+### Cons
+
+* **Spaghetti** html and css.
+
+So you should probably create your own.
 
 ## Getting started (editing the page)
 
