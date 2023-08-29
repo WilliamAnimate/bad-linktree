@@ -1,12 +1,16 @@
-/* idk */
-
-@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 /* to change the font to a custom one, use google fonts.
 you will need a little bit of css experience, so you might want to learn it for just one second... */
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
 :root {
-	/* global (no light/dark mode specific because... its kinda stupid */
+	/* global (no light/dark mode specific because... its kinda stupid
+	if you do want to make it l/d specific, go ahead. nobody's stopping you.
+	*/
 	--font: "lexend";
+	/* NOTE: having any sort of blur makes firefox lag, be weary. For more info, see the #Working-browsers section of readme.md */
+	--blur-background: 0px; /* background blur. Set to 0 if you're worried about performance. */
+
+	--profile-logo-radius: 10ex; /* set to 0ex for square. */
 
 	/* light mode specific */
 	--color-bg: #ddd;
@@ -19,8 +23,7 @@ you will need a little bit of css experience, so you might want to learn it for 
 
 	--image-background-bg: url("img/whatlight.svg"); /* light mode background */
 
-	--image-profile-logo: url('https://avatars.githubusercontent.com/u/75321465?v=4') /* light mode profile logo */
-
+	--image-profile-logo: url('https://avatars.githubusercontent.com/u/75321465?v=4'); /* light mode profile logo */
 }
 @media(prefers-color-scheme: dark) {
 	:root {
@@ -33,9 +36,7 @@ you will need a little bit of css experience, so you might want to learn it for 
 		--color-button-default-hover: #0090b4;
 		--color-text-button-default-hover: #fff;
 
-		/* --image-background-bg: url("img/whatdark.svg"); */
-		--image-background-bg: url('img/whatdark.svg');
-		/* dark mode background */
+		--image-background-bg: url('img/whatdark.svg'); /* dark mode background */
 
 		--image-profile-logo: url('https://avatars.githubusercontent.com/u/75321465?v=4'); /* dark mode profile logo */
 	}
@@ -43,30 +44,57 @@ you will need a little bit of css experience, so you might want to learn it for 
 
 /* don't edit anything below, unless you know what you're doing. */
 
+@keyframes fade-in {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
 * {
-	font-family: lexend !important;
+	/* applying this on * may be a little laggy, maybe try something else? */
+	font-family: var(--font) !important;
 	font-weight: 400;
 	text-align: center;
 
 	scroll-behavior: smooth;
+
+	/* attribution: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+	/* attribution: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+	display: none;
 }
 
 body {
+	/* background */
 	background-color: var(--color-bg);
 	background-image: var(--image-background-bg);
-	/* background-image: url('img/f.png'); */
-	background-size: cover; /* This makes the image cover the entire background */
-	background-position: center; /* This centers the background image */
+	background-size: cover;
+	background-position: center;
+	backdrop-filter: blur(var(--blur-background));
+
+	/* general */
 	color: var(--color-text);
+
+	padding: 0px;
+	margin: 0px;
+
+	/* entry animation */
+	/* opacity: 0; */
+	/* transform: translateY(-10px); */
+	/* animation: fade-in 0.5s ease-out forwards 0.5s; */
 }
 
 #profile-logo {
-	border-radius: 10ex;
+	border-radius: var(--profile-logo-radius);
 	content: var(--image-profile-logo);
+	height: 150px;
+	width: 150px
 }
 
 /* button */
-
 /* custom style */
 
 .button--anim-left-to-right::before {
@@ -100,7 +128,7 @@ a .button--anim-left-to-right-full:hover::before {
 }
 
 .button--anim-right-to-left-full::before {
-	transform: skew(0deg, 0) translate(100%);
+	transform: skew(0deg, 0) translate(83.5%);
 }
 a .button--anim-right-to-left-full:hover::before {
 	transform: skew(0deg, 0) translate(0%);
@@ -132,51 +160,37 @@ a .button--anim-skew-translate-in:hover::before {
 }
 
 .button--anim-skew-translate-out::before {
-    transform: skew(-70deg, 0) translate(100%);
+    transform: skew(-70deg, 0) translate(101.5%);
 }
 
 a .button--anim-skew-translate-out:hover::before {
     transform: skew(-70deg, 0) translate(-5%);
 }
 
-
-.uppercase {
-	text-transform: uppercase;
-}
-
-
 /* the actual styles */
 
 button {
 	box-sizing: inherit;
-	font-weight: 900;
-	letter-spacing: 1px;
 	background-color: transparent;
 	color: var(--color-text-button-default-nohover);
 	border: 1px solid var(--color-button-default-nohover);
 	cursor: pointer;
 	padding: 15px 15px;
 	width: 100%;
-	transition: background-color 200ms, color 200ms;
+	transition: background-color 300ms, color 300ms;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 10px;
 
-	/* display: block; */
-	z-index: 20;
 	position: relative;
 	overflow: hidden;
-
-	text-decoration: none;
 }
 
 button::before{
 	content: '';
 	position: absolute;
-	display: block;
 	width: 120%;
 	height: 100%;
-	/* background-color: #ff862c; */
 	background-color: var(--color-button-default-hover);
 	left: 0;
 	top: 0;
@@ -192,8 +206,17 @@ button img {
 	position: relative;
 	display: inline-block;
 	z-index: 100;
+
+	transition: transform 300ms;
 }
-/* a:hover button::before {} */
+button:hover img {
+	transform: translateY(-5px);
+	animation: 1s ease-out forwards;
+
+	border-color: solid #ffffff;
+	border: 10px;
+}
+
 a {
 	text-decoration: none;
 }
@@ -209,8 +232,8 @@ a button:hover {
 	}
 }
 
-@media (min-width: 820px) {
+@media (max-width: 800px) {
 	button {
-		display: inline;
+		max-width: 90%;
 	}
 }
