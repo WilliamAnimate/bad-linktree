@@ -3,6 +3,9 @@
 > **Warning**:
 > bad-linktree is still in development! I wouldn't recommend using this for your professional linktree thing yet, feel free to do so anyway.
 
+> **Note**:
+> This site isn't hosted anywhere yet.
+
 # bad-linktree
 
 my own custom linktree alternative.
@@ -21,9 +24,9 @@ Why use this over *literally any other solution*/*your own alternative*?
 
 ### Pros
 
-* **No watermark** at the bottom of the page
+* **No watermark** at the bottom of the page.
 
-* **No forced ads** if you don't want to
+* **No forced ads** if you don't want it to.
 
 * **You have full control** over the page by styling your own css, adding your own JS, and even editing the HTML. This is simply a starting point.
 
@@ -33,6 +36,8 @@ Why use this over *literally any other solution*/*your own alternative*?
 ### Cons
 
 * **Spaghetti** html and css.
+
+* **Poor documentation** sorry guys.
 
 So you should probably create your own.
 

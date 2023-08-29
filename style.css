@@ -1,35 +1,48 @@
 /* idk */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+/* to change the font to a custom one, use google fonts.
+you will need a little bit of css experience, so you might want to learn it for just one second... */
+
 :root {
+	/* global (no light/dark mode specific because... its kinda stupid */
+	--font: "lexend";
+
+	/* light mode specific */
 	--color-bg: #ddd;
 	--color-text: #1b1b1b;
-	--background-bg: url("img/whatlight.svg"); /* light mode background */
 	/* button colors */
 	--color-button-default-nohover: #00ccff;
 	--color-text-button-default-nohover: #00ccff;
 	--color-button-default-hover: #00ccff;
 	--color-text-button-default-hover: #000;
+
+	--image-background-bg: url("img/whatlight.svg"); /* light mode background */
+
+	--image-profile-logo: url('https://avatars.githubusercontent.com/u/75321465?v=4') /* light mode profile logo */
+
 }
 @media(prefers-color-scheme: dark) {
 	:root {
+		/* dark mode specific */
 		--color-bg: #1b1b1b;
 		--color-text: #ddd;
-		--background-bg: url("img/whatdark.svg"); /* dark mode background */
 		/* button colors */
-		--color-button-default-nohover: #00ccff;
-		--color-text-button-default-nohover: #00ccff;
-		--color-button-default-hover: #00ccff;
+		--color-button-default-nohover: #0090b4;
+		--color-text-button-default-nohover: #0090b4;
+		--color-button-default-hover: #0090b4;
 		--color-text-button-default-hover: #fff;
+
+		/* --image-background-bg: url("img/whatdark.svg"); */
+		--image-background-bg: url('img/whatdark.svg');
+		/* dark mode background */
+
+		--image-profile-logo: url('https://avatars.githubusercontent.com/u/75321465?v=4'); /* dark mode profile logo */
 	}
 }
 
-#profile-logo {
-	border-radius: 10ex;
-}
+/* don't edit anything below, unless you know what you're doing. */
 
-/* don't edit anything below, unless you've worked with css. */
-
-@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Lexend:wght@100;400&display=swap'); */
 * {
 	font-family: lexend !important;
 	font-weight: 400;
@@ -40,17 +53,16 @@
 
 body {
 	background-color: var(--color-bg);
-	background-image: var(--background-bg);
+	background-image: var(--image-background-bg);
+	/* background-image: url('img/f.png'); */
 	background-size: cover; /* This makes the image cover the entire background */
 	background-position: center; /* This centers the background image */
 	color: var(--color-text);
 }
 
-#idkwhattonamethis {
-	display: flex;
-	flex-direction: column !important;
-	gap: 10px;
-	box-sizing: inherit;
+#profile-logo {
+	border-radius: 10ex;
+	content: var(--image-profile-logo);
 }
 
 /* button */
@@ -140,8 +152,8 @@ button {
 	font-weight: 900;
 	letter-spacing: 1px;
 	background-color: transparent;
-	color: #00ccff;
-	border: 1px solid #00ccff;
+	color: var(--color-text-button-default-nohover);
+	border: 1px solid var(--color-button-default-nohover);
 	cursor: pointer;
 	padding: 15px 15px;
 	width: 100%;
@@ -165,7 +177,7 @@ button::before{
 	width: 120%;
 	height: 100%;
 	/* background-color: #ff862c; */
-	background-color: #00ccff;
+	background-color: var(--color-button-default-hover);
 	left: 0;
 	top: 0;
 	z-index: 0;
