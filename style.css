@@ -44,10 +44,7 @@ you will need a little bit of css experience, so you might want to learn it for 
 
 /* don't edit anything below, unless you know what you're doing. */
 
-@keyframes fade-in {
-	from {opacity: 0}
-	to {opacity: 1}
-}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
 
 * {
 	/* applying this on * may be a little laggy, maybe try something else? */
@@ -82,9 +79,9 @@ body {
 	margin: 0px;
 
 	/* entry animation */
-	/* opacity: 0; */
-	/* transform: translateY(-10px); */
-	/* animation: fade-in 0.5s ease-out forwards 0.5s; */
+	opacity: 0;
+	transform: translateY(-10px);
+	animation: fade-in 0.5s ease-out forwards 0.5s;
 }
 
 #profile-logo {
@@ -111,14 +108,6 @@ a .button--anim-left-to-right:hover::before {
 a .button--anim-right-to-left:hover::before {
 	transform: skew(0deg, 0) translate(0%);
 }
-
-/* FIXME */
-/* .button--anim-bottom-to-top::before {
-    transform: skew(0deg, 89deg) translate(100%);
-}
-a:hover .button--anim-bottom-to-top::before {
-    transform: skew(0deg, 89deg) translate(0%);
-} */
 
 .button--anim-left-to-right-full::before {
 	transform: skew(0deg, 0) translate(-100%);
@@ -203,37 +192,28 @@ button h1 {
 	z-index: 100;
 }
 button img {
-	position: relative;
-	display: inline-block;
-	z-index: 100;
-
 	transition: transform 300ms;
 }
 button:hover img {
 	transform: translateY(-5px);
 	animation: 1s ease-out forwards;
-
-	border-color: solid #ffffff;
-	border: 10px;
 }
 
-a {
-	text-decoration: none;
-}
 a button:hover {
 	color: #fff;
 	background-color: #00ccff;
 	background-color: inherit;
 }
 
-@media (min-width: 668px) {
-	button {
-		max-width: 340px;
-	}
+button {
+	max-width: 340px;
 }
 
 @media (max-width: 800px) {
 	button {
 		max-width: 90%;
 	}
+	/* button::before {
+		display: none;
+	} */
 }
