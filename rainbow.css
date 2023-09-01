@@ -1,0 +1,14 @@
+/* maybe one day... */
+@keyframes rainbow {
+	0% {color:#f00}
+	16.67% {color:#ff0}
+	33.33% {color:#0f0}
+	50% {color:#0ff}
+	66.67% {color:#00f}
+	83.33% {color:#f0f}
+	100% {color:#f00}
+}
+
+.rainbow {
+	animation: rainbow 25s infinite;
+}

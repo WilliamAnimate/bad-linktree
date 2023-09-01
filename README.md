@@ -12,6 +12,10 @@
 
 my own custom linktree alternative.
 
+[see the page where it demostrates what it can do](https://williamanimate.github.io/bad-linktree/index.html)
+
+[see what it would look like "professionally"](https://williamanimate.github.io/bad-linktree/e.html)
+
 ## **Table of Contents**
 
 * [**Table of Contents**](#table-of-contents)
@@ -24,40 +28,46 @@ my own custom linktree alternative.
 
 ## Pros & Cons
 
-This isn't perfect, but you should take a look.
+This isn't perfect, but i've tried my best!
 
 ### Pros
 
 * **No watermark** at the bottom of the page.
 
-* **No forced ads** if you don't want it to.
+* **No forced ads** by default, but you can add your own ads... if you really want to.
 
 * **You have full control** over the page by styling your own css, adding your own JS, and even editing the HTML. This is simply a starting point.
 
 * **Nearly zero limitations**: Lets say some specific website TOS doesn't allow `x`, but your whole point revolves around `x` and you want to make it themed like such (and `y` isn't an option)<br>
 ...Or simply you can't find one with such a permissive license...
 
+* **Fully responsive** webpage. Though to be fair, it isn't that hard to make it responsive, its simply buttons with text on it.
+
 ### Cons
 
 * **Spaghetti** html and css.
 
-* **Poor documentation** sorry guys.
+* **Poor documentation** sorry.
 
 * **You have to host it yourself** or you can simply use github pages.
 
+* **No advanced color customization** you can only select 1 color or something.
+
 ## Working browsers
 
-Tested and displays properly on...
+Tested and works as WilliTended™ on...
 
-**Firefox** 116.0.3
+**Windows 10** 22H2 OS Build 19045.3393 64 bit on a 1920x1080 display.
 
-> Only known problem: Firefox isn't good with animations, expect performance issues. Firefox L right here
+**Firefox** 117.0
+
+> Only known problem: sometimes, having backround blur causes performance problems. Firefox L right here
 >
 > [https://greensock.com/forums/topic/15937-is-it-me-or-firefox/](https://greensock.com/forums/topic/15937-is-it-me-or-firefox/)
 
 **MS Edge** 116.0.1938.62
 
-> Scroll a lot and edge freezes. Common edge L.
+> May have perf problems here. Common edge L.
 
 **DuckDuckGo (browser)** whothehellknowswhichversion (WebView2 115.0.1901.200)
 
@@ -77,6 +87,8 @@ Tested and displays properly on...
 
 * **Something to edit files with** - If you're using my favourite distro of the NT kernel, Windows, there is a preinstalled application called **Notepad.exe** (located in the system32 folder) that should work. If you're on ~~GNU/Linux~~ ~~GNU/Linux~~ [Linux](https://wikipedia.org/wiki/Linux) based operating systems, you probably already have [**emacs**](https://wikipedia.org/wiki/Emacs), [**nvim**](https://wikipedia.org/wiki/Vim_(text_editor)#Neovim), [**vim**](https://wikipedia.org/wiki/Vim_(text_editor)), [**vi**](https://wikipedia.org/wiki/Vi) or [**gnu nano**](https://wikipedia.org/wiki/GNU_nano) installed. feel free to use that.
 
+* **Literally any sort of knowlege on css** - so you don't break the webpage, hopefully.
+
 ### Editing
 
 I don't know. You've come this far, im sure you'll think of something.
@@ -89,7 +101,9 @@ There is no backend (so you *probably* don't need to use docker). As long as you
 
 * **A calculator** - One of those modern calculators that can do billions of calculations in a second, chances are, you already have one right now, infront of you.
 
-* **Git** - To download the repo, but you can always click on **Code > Download ZIP**
+* **Something that can display "on" and "off" (like a monitor)** - If it can play *bad apple*, then it can be displayed. Though for optimal editing, you should use one that can display millions of colors.
+
+* **Git** - To download the repo, commit and push to your own repo. but you can always click on **Code > Download ZIP** or similar.
 
 * **Something to deploy the HTML page to** - I'm not a server admin I don't know lol.
 

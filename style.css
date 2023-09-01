@@ -1,31 +1,29 @@
-/* to change the font to a custom one, use google fonts.
-you will need a little bit of css experience, so you might want to learn it for just one second... */
-@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+/* to change the font to a custom one, use google fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+
+/* NOTE: this stylesheet isn't meant to be used in any other environment other than 'bad-linktree', its quite "fragile". */
 
 :root {
-	/* global (no light/dark mode specific because... its kinda stupid
-	if you do want to make it l/d specific, go ahead. nobody's stopping you.
-	*/
+	/* global variables */
 	--font: "lexend";
-	/* NOTE: having any sort of blur makes firefox lag, be weary. For more info, see the #Working-browsers section of readme.md */
-	--blur-background: 0px; /* background blur. Set to 0 if you're worried about performance. */
+	--blur-background: 10px; /* background blur */
 
-	--profile-logo-radius: 10ex; /* set to 0ex for square. */
+	--profile-logo-radius: 10ex; /* how circle-y your profile logo will be. */
 
 	/* light mode specific */
 	--color-bg: #ddd;
 	--color-text: #1b1b1b;
 	/* button colors */
-	--color-button-default-nohover: #00ccff;
-	--color-text-button-default-nohover: #00ccff;
-	--color-button-default-hover: #00ccff;
+	--color-button-default-nohover: #0cf;
+	--color-text-button-default-nohover: #0cf;
+	--color-button-default-hover: #0cf;
 	--color-text-button-default-hover: #000;
 
 	--image-background-bg: url("img/whatlight.svg"); /* light mode background */
 
 	--image-profile-logo: url('https://avatars.githubusercontent.com/u/75321465?v=4'); /* light mode profile logo */
 }
-@media(prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
 	:root {
 		/* dark mode specific */
 		--color-bg: #1b1b1b;
@@ -44,19 +42,43 @@ you will need a little bit of css experience, so you might want to learn it for 
 
 /* don't edit anything below, unless you know what you're doing. */
 
-@keyframes fade-in{from{opacity:0}to{opacity:1}}
+@keyframes fade-in {
+	from {opacity:0}
+	to {opacity:1}
+}
 
-* {
-	/* applying this on * may be a little laggy, maybe try something else? */
-	font-family: var(--font) !important;
-	font-weight: 400;
+@keyframes fade-out {
+	from {opacity:1}
+	to {opacity:0}
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0)}
+	40% {transform: translateY(-10px)}
+	60% {transform: translateY(-5px)}
+}
+
+#loading {
+	display: none;
+	position: absolute;
+	animation: bounce 1s ease infinite;
+	z-index: 100;
+}
+
+.loadingout {
+	animation: fade-out 0.5s ease-out !important;
+}
+
+html {
 	text-align: center;
-
-	scroll-behavior: smooth;
 
 	/* attribution: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+}
+
+html, button {
+	font-family: var(--font) !important;
 }
 
 body::-webkit-scrollbar {
@@ -66,29 +88,51 @@ body::-webkit-scrollbar {
 
 body {
 	/* background */
-	background-color: var(--color-bg);
 	background-image: var(--image-background-bg);
 	background-size: cover;
 	background-position: center;
-	backdrop-filter: blur(var(--blur-background));
+	background-attachment: fixed;
+	/* backdrop-filter: blur(var(--blur-background)); */
+	min-height: 100vh; /* so the entire background remains blurred incase you don't scroll */
 
 	/* general */
+	background-color: var(--color-bg);
 	color: var(--color-text);
 
 	padding: 0px;
 	margin: 0px;
+	margin-bottom: -10px !important; /* stupid fix */
+}
 
-	/* entry animation */
+.blurred {
+	backdrop-filter: blur(var(--blur-background));
+
+}
+
+.animate {
 	opacity: 0;
-	transform: translateY(-10px);
 	animation: fade-in 0.5s ease-out forwards 0.5s;
 }
 
 #profile-logo {
+	margin-top: 40px;
 	border-radius: var(--profile-logo-radius);
 	content: var(--image-profile-logo);
 	height: 150px;
 	width: 150px
+}
+
+.herotitle {
+	font-size: 3em;
+	margin: 0px;
+}
+
+#content {
+	display: inherit; /* incase the user has js disabled, this will be manually hidden by JS. */
+
+	opacity: 0;
+	transform: translateY(-10px);
+	animation: fade-in 0.5s ease-out forwards 0.5s;
 }
 
 /* button */
@@ -125,35 +169,35 @@ a .button--anim-right-to-left-full:hover::before {
 
 
 .button--anim-skew-left::before {
-    transform: skew(-70deg, 0) translate(-110%);
+	transform: skew(-70deg, 0) translate(-110%);
 }
 
 a .button--anim-skew-left:hover::before {
-    transform: skew(-70deg, 0) translate(-10%);
+	transform: skew(-70deg, 0) translate(-10%);
 }
 
 .button--anim-skew-right::before {
-    transform: skew(70deg, 0) translate(-110%);
+	transform: skew(70deg, 0) translate(-110%);
 }
 
 a .button--anim-skew-right:hover::before {
-    transform: skew(70deg, 0) translate(-10%);
+	transform: skew(70deg, 0) translate(-10%);
 }
 
 .button--anim-skew-translate-in::before {
-    transform: skew(70deg, 0) translate(100%);
+	transform: skew(70deg, 0) translate(100%);
 }
 
 a .button--anim-skew-translate-in:hover::before {
-    transform: skew(70deg, 0) translate(-5%);
+	transform: skew(70deg, 0) translate(-5%);
 }
 
 .button--anim-skew-translate-out::before {
-    transform: skew(-70deg, 0) translate(101.5%);
+	transform: skew(-70deg, 0) translate(101.5%);
 }
 
 a .button--anim-skew-translate-out:hover::before {
-    transform: skew(-70deg, 0) translate(-5%);
+	transform: skew(-70deg, 0) translate(-5%);
 }
 
 /* the actual styles */
@@ -167,8 +211,6 @@ button {
 	padding: 15px 15px;
 	width: 100%;
 	transition: background-color 300ms, color 300ms;
-	margin-left: auto;
-	margin-right: auto;
 	margin-bottom: 10px;
 
 	position: relative;
@@ -190,8 +232,12 @@ button h1 {
 	position: relative;
 	display: block;
 	z-index: 100;
+	font-weight: 400;
+
+	text-shadow: 0px 0px 10px #000; /* incase the ::before element covers the text */
 }
 button img {
+	width: 30px;
 	transition: transform 300ms;
 }
 button:hover img {
@@ -200,8 +246,9 @@ button:hover img {
 }
 
 a button:hover {
-	color: #fff;
+	color: var(--color-text-button-default-hover);
 	background-color: #00ccff;
+	/* remove inherit for a cool effect */
 	background-color: inherit;
 }
 
@@ -209,11 +256,13 @@ button {
 	max-width: 340px;
 }
 
-@media (max-width: 800px) {
-	button {
-		max-width: 90%;
+@media (max-width: 820px) {
+	button {max-width:90%}
+	body {
+		padding-right: 5%;
+		padding-left: 5%;
 	}
-	/* button::before {
-		display: none;
-	} */
+	.herotitle {
+		font-size: 2em;
+	}
 }

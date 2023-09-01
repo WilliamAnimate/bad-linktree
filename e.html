@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!-- common -->
+		<meta name="description" content="The best linktree description"> <!-- change your embed description here -->
+		<meta name="author" content="WilliamAnimate"> <!-- feel free to change this -->
+		<meta name="copyright" content="WilliamAnimate"> <!-- feel free to change this too -->
+		<meta name="robots" content="index, follow">
+		<meta name="rating" content="safe for kids"> <!-- don't mess this one up -->
+
+		<!-- opengraph -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://williamanimate.github.io/bad-linktree"> <!-- add your website link here. -->
+		<meta property="og:title" content="all the links!"> <!-- change your title here -->
+		<meta property="og:description" content="The best linktree description"> <!-- change your embed description here -->
+		<meta property="og:image" content="https://williamanimate.github.io/bad-linktree/img/metaimg.png"> <!-- change your image here -->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>All the links!</title>
+
+		<link rel="stylesheet" href="style.css">
+		<style>
+			/* css overrides because i don't want 2 style.css files */
+			:root {
+				--image-background-bg: url('img/cantfindalightmodewallpapersoimusingthisnow.png');
+				--color-button-default-nohover: #0cf;
+				--color-text-button-default-nohover: #0cf;
+				--color-button-default-hover: #0cf;
+				--color-text-button-default-hover: #fff;
+
+				--do-invert: INVERT(0); /* fix github */
+			}
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--color-button-default-nohover: #0090b4;
+					--color-text-button-default-nohover: #fff;
+					--color-button-default-hover: #0090b4;
+					--color-text-button-default-hover: #0090b4;
+					--image-background-bg: url('https://community.akamai.steamstatic.com/economy/profilebackground/items/420530/9d8536eb577ef677f1ce5789f58133cc8afe8280.jpg');
+					/* dark mode background */
+					/* --image-background-bg: url('img/whatdark.svg'); */
+
+					--do-invert: INVERT(100); /* fix github */
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="loading">
+			<h1 style="font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif">gimme a sec...</h1>
+			<p style="font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif"onclick="init()">click here to skip cutscene</p>
+		</div>
+		<div id="content">
+			<img id="profile-logo">
+			<h1 class="herotitle">WilliamAnimate</h1>
+			<p>Your local frontend web designer, batch hackerman, graphic designer, markdown enthusiast & 404 page specialist.</p>
+
+			<a href="https://github.com/williamanimate"><button class="button--anim-left-to-right">
+				<img src="https://www.gibboncode.org/img/icons/github-icon.png" style="filter: var(--do-invert)">
+				<h1>Github</h1>
+			</button></a>
+				<br>
+			<a href="https://youtube.com/@itswilliamanimate"><button class="button--anim-left-to-right">
+				<img src="https://ryan.himmelwright.net/img/posts/getting-an-ipad/youtube-logo.png">
+				<h1>Youtube (primary channel)</h1>
+			</button></a>
+				<br>
+			<a href="https://youtube.com/@itsprobablywilliamanimate"><button class="button--anim-left-to-right">
+				<img src="https://ryan.himmelwright.net/img/posts/getting-an-ipad/youtube-logo.png">
+				<h1>Youtube (shitpost channel)</h1>
+			</button></a>
+				<br>
+
+			<a href="https://steamcommunity.com/id/williamanimate"><button class="button--anim-left-to-right">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/768px-Steam_icon_logo.svg.png">
+				<h1>Steam Community</h1>
+			</button></a>
+				<br>
+
+			<a href="https://dmoj.ca/user/WilliamAnimate"><button class="button--anim-left-to-right">
+				<img src="https://via.placeholder.com/30x30">
+				<h1>dmoj.ca</h1>
+			</button></a>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
