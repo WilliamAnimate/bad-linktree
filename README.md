@@ -4,9 +4,6 @@
 
 > **Warning**:
 > bad-linktree is still in development! I wouldn't recommend using this for your professional linktree thing yet, feel free to do so anyway.
->
-> **Note**:
-> This site isn't hosted anywhere yet.
 
 # bad-linktree
 
