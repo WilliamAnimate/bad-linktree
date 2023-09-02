@@ -82,7 +82,7 @@ Tested and works as WilliTended™ on...
 
 * **A calculator** - Preferably one that can do billions of calculations in a second, but if you have to, feel free to use the [**BBC Micro**](https://wikipedia.org/wiki/BBC_Micro) if you have to.
 
-* **Something to edit files with** - If you're using my favourite distro of the NT kernel, Windows, there is a preinstalled application called **Notepad.exe** (located in the system32 folder) that should work. If you're on ~~GNU/Linux~~ ~~GNU/Linux~~ [Linux](https://wikipedia.org/wiki/Linux) based operating systems, you probably already have [**emacs**](https://wikipedia.org/wiki/Emacs), [**nvim**](https://wikipedia.org/wiki/Vim_(text_editor)#Neovim), [**vim**](https://wikipedia.org/wiki/Vim_(text_editor)), [**vi**](https://wikipedia.org/wiki/Vi) or [**gnu nano**](https://wikipedia.org/wiki/GNU_nano) installed. feel free to use that.
+* **Something to edit files with** - If you're using my favourite distro of the NT kernel, Windows, there is a preinstalled application called **Notepad.exe** (located in the system32 folder) that should work. If you're on ~~GNU/Linux~~ [Linux](https://wikipedia.org/wiki/Linux) based operating systems, you probably already have [**emacs**](https://wikipedia.org/wiki/Emacs), [**nvim**](https://wikipedia.org/wiki/Vim_(text_editor)#Neovim), [**vim**](https://wikipedia.org/wiki/Vim_(text_editor)), [**vi**](https://wikipedia.org/wiki/Vi) or [**gnu nano**](https://wikipedia.org/wiki/GNU_nano) installed. feel free to use that.
 
 * **Literally any sort of knowlege on css** - so you don't break the webpage, hopefully.
 
@@ -175,7 +175,7 @@ You have deployed your site to the world, for anyone to see!
 
 This code under this repository is licensed under the [Unlicense](https://choosealicense.com/licenses/unlicense/).
 
-This means that you're **allowed** to use this code, for any purpose, without attribution. Do whatever, have fun.
+This means that you're **allowed** to use this code, for any purpose, and you don't have to credit me (though I would really appreciate it if you did, but you don't have to). Do whatever, have fun.
 
 ## Attribution
 

@@ -60,13 +60,27 @@
 
 #loading {
 	display: none;
-	position: absolute;
-	animation: bounce 1s ease infinite;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
 	z-index: 100;
+}
+#loadingcentered {
+	left: 0;
+	right: 0;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+}
+#loadingtext {
+	animation: bounce 1s ease infinite;
 }
 
 .loadingout {
 	animation: fade-out 0.5s ease-out !important;
+}
+.loadingin {
+	animation: fade-in 0.5s ease-out !important;
 }
 
 html {
@@ -93,7 +107,6 @@ body {
 	background-position: center;
 	background-attachment: fixed;
 	/* backdrop-filter: blur(var(--blur-background)); */
-	min-height: 100vh; /* so the entire background remains blurred incase you don't scroll */
 
 	/* general */
 	background-color: var(--color-bg);
@@ -106,20 +119,21 @@ body {
 
 .blurred {
 	backdrop-filter: blur(var(--blur-background));
-
 }
 
-.animate {
-	opacity: 0;
-	animation: fade-in 0.5s ease-out forwards 0.5s;
-}
+/* TODO: readd the .animate, but it interferes with the loading text. */
+/* body .animate { */
+	/* opacity: 0; */
+	/* animation: fade-in 0.5s ease-out forwards 0.5s; */
+	/* animation: fade-in 4s ease-out forwards 4s; */
+/* } */
 
 #profile-logo {
 	margin-top: 40px;
 	border-radius: var(--profile-logo-radius);
 	content: var(--image-profile-logo);
 	height: 150px;
-	width: 150px
+	width: 150px;
 }
 
 .herotitle {
@@ -234,7 +248,7 @@ button h1 {
 	z-index: 100;
 	font-weight: 400;
 
-	text-shadow: 0px 0px 10px #000; /* incase the ::before element covers the text */
+	text-shadow: 0px 0px 10px var(--color-bg); /* incase the ::before element covers the text */
 }
 button img {
 	width: 30px;

@@ -37,20 +37,20 @@
 					--color-button-default-nohover: #0090b4;
 					--color-text-button-default-nohover: #fff;
 					--color-button-default-hover: #0090b4;
-					--color-text-button-default-hover: #0090b4;
-					--image-background-bg: url('https://community.akamai.steamstatic.com/economy/profilebackground/items/420530/9d8536eb577ef677f1ce5789f58133cc8afe8280.jpg');
-					/* dark mode background */
-					/* --image-background-bg: url('img/whatdark.svg'); */
+					--color-text-button-default-hover: #000;
+					--image-background-bg: url('https://community.akamai.steamstatic.com/economy/profilebackground/items/420530/9d8536eb577ef677f1ce5789f58133cc8afe8280.jpg'); /* dark mode background */
 
 					--do-invert: INVERT(100); /* fix github */
 				}
 			}
 		</style>
 	</head>
-	<body>
+	<body class="blurred animate">
 		<div id="loading">
-			<h1 style="font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif">gimme a sec...</h1>
-			<p style="font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif"onclick="init()">click here to skip cutscene</p>
+			<div id="loadingcentered">
+				<h1 style="font-family:lexend,'Segoe UI',Tahoma,Geneva,Verdana,sans-serif" id="loadingtext">gimme a sec...</h1>
+				<p style="font-family:lexend,'Segoe UI',Tahoma,Geneva,Verdana,sans-serif"onclick="init()">click here to skip cutscene</p>
+			</div>
 		</div>
 		<div id="content">
 			<img id="profile-logo">
@@ -80,6 +80,7 @@
 				<br>
 
 			<a href="https://dmoj.ca/user/WilliamAnimate"><button class="button--anim-left-to-right">
+				<!-- <img src="https://static.dmoj.ca/static/icons/logo.021be82ad4a6.svg"> -->
 				<img src="https://via.placeholder.com/30x30">
 				<h1>dmoj.ca</h1>
 			</button></a>
