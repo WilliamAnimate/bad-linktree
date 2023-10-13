@@ -145,7 +145,7 @@ edit the files to your liking. For more info, see [#Editing](#editing)
 
 go to github and navigate to your new repo containing the code.
 
-> **Remember**:
+> [!IMPORTANT]
 > You may need your repo to be public in order to deploy it. For more info, see [this page](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
 then click on settings
