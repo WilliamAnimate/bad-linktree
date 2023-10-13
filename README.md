@@ -2,7 +2,7 @@
 
 <div id=top>
 
-> **Warning**:
+> [!WARNING]
 > bad-linktree is still in development! I wouldn't recommend using this for your professional linktree thing yet, feel free to do so anyway.
 
 # bad-linktree
@@ -138,7 +138,7 @@ edit the files to your liking. For more info, see [#Editing](#editing)
  git commit -m "0"
  ```
 
- > **Note**:
+ > [!NOTE]
  > I have never used git from the command line, you probably have to select/create a repo first or something I don't know.
 
 4. fire up the site
